@@ -90,8 +90,31 @@ header{
     gap:2rem;
 }
 
-#note{
+.note{
     min-height: 200px;
     padding: 1rem;
     border: 1px solid#ccc;
+    background-color: #202124;
+    border-radius: 10px;
+    color: #fff;
+    position: relative;
+}
+
+.note textarea{
+    background-color: transparent;
+    resize: none;
+    color: #fff;
+    border: none;
+    height: 100%;
+    outline: none;
+}
+
+.note .bi-pin{
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 1.2rem;
+    background-color: #333;
+    cursor: pointer;
+    padding: 5px;
 }
