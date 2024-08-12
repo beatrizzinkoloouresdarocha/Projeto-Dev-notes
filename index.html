@@ -17,19 +17,25 @@
 <body>
     <!-- Header -->
     <header class="container my-4">
-        <div class="d-flex justify-content-between align-items-center">
-            <h1 class="display-6">DevNotes</h1>
+        <div class="header-content d-flex justify-content-between align-items-center">
+            <!-- Title -->
+            <div class="header-title">
+                <h1 class="display-6">DevNotes</h1>
+            </div>
+            <!-- Actions Container -->
             <div id="actions-container" class="d-flex align-items-center">
                 <!-- Search Container -->
-                <div id="search-container" class="me-3">
+                <div id="search-container" class="me-3 d-flex align-items-center">
                     <label for="search-input" class="visually-hidden">Buscar nota</label>
                     <i class="bi bi-search"></i>
                     <input type="text" id="search-input" class="form-control" placeholder="Busque por uma nota">
                 </div>
                 <!-- Export Button -->
-                <button id="export-notes" class="btn btn-secondary">
-                    Exportar CSV <i class="bi bi-download"></i>
-                </button>
+                <div class="export-container">
+                    <button id="export-notes" class="btn btn-secondary">
+                        Exportar CSV <i class="bi bi-download"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </header>
@@ -37,7 +43,7 @@
     <!-- Main Content -->
     <main class="container">
         <!-- Add Note Container -->
-        <div id="add-note-container" class="input-group my-4">
+        <div id="add-note-container" class="input-group my-4 d-flex align-items-center">
             <label for="note-content" class="visually-hidden">Nova nota</label>
             <input type="text" id="note-content" class="form-control" placeholder="O que deseja anotar?">
             <button class="btn btn-primary add-note">
