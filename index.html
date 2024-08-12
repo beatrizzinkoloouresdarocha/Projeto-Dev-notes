@@ -17,18 +17,19 @@
 <body>
     <header>
         <h1>DevNotes</h1>
-        <div id="search-container">
-            <i class="bi bi-search"></i>
-            <input type="text" id="search-input" placeholder="Busque por uma nota">
+        <div id="actions-container">
+            <div id="search-container">
+                <i class="bi bi-search"></i>
+                <input type="text" id="search-input" class="form-control" placeholder="Busque por uma nota">
+            </div>
+            <button id="export-notes" class="btn btn-secondary">
+                Exportar CSV <i class="bi bi-download"></i>
+            </button>
         </div>
-        <button id="exports-notes">
-
-        Exportar-CV <i class="bi bi-download"></i>
-        </button>
     </header>
     <div id="add-note-container">
-        <input type="text" id="note-content" placeholder="O que desja anotar?">
-        <button class="add-note"><i class="bi bi-plus-lg"></i></button>
+        <input type="text" id="note-content" class="form-control" placeholder="O que deseja anotar?">
+        <button class="add-note btn btn-primary"><i class="bi bi-plus-lg"></i></button>
     </div>
     <div id="notes-container"></div>
 </body>
