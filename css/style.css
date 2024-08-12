@@ -8,11 +8,12 @@
 
 body {
     background-color: #202124;
+    color: #fff; /* Adicionando cor de texto padrão */
 }
 
 /* Header */
 header {
-    border-bottom: 1px solid #ccc;
+    border-bottom: 1px solid #333;
     padding: 1rem 2rem;
     color: #fff;
 }
@@ -58,6 +59,7 @@ header {
     align-items: center;
 }
 
+/* Botão de Exportação */
 #export-notes {
     background-color: #333;
     border: 2px solid #fff;
@@ -85,8 +87,8 @@ header {
 
 #add-note-container input {
     flex: 1;
-    background-color: transparent;
-    border: 1px solid #525356;
+    background-color: #525356;
+    border: 1px solid #ccc;
     color: #fff;
     padding: 10px;
     border-radius: 5px;
@@ -112,61 +114,58 @@ header {
 .note {
     min-height: 200px;
     padding: 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid #333;
     background-color: #202124;
     border-radius: 10px;
     color: #fff;
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
-.note textarea {
-    background-color: transparent;
-    resize: none;
+.note p {
+    margin-bottom: 1rem; 
+}
+
+.note button {
+    margin-top: auto;
+    background-color: #333;
     color: #fff;
     border: none;
-    height: 100%;
-    outline: none;
-}
-
-.note .bi-pin {
-    position: absolute;
-    left: 10px;
-    bottom: 10px;
-    font-size: 1.2rem;
-    background-color: #333;
+    padding: 5px 10px;
+    border-radius: 5px;
     cursor: pointer;
-    padding: 5px;
-}
-
-.note:hover .bi-pin {
-    opacity: 1;
-}
-
-.note .bi-x-lg,
-.note .bi-file-earmark-plus {
-    position: absolute;
-    right: 10px;
     font-size: 0.9rem;
-    padding: 5px;
-    transition: color 0.3s;
-    color: #555;
-    cursor: pointer;
-    opacity: 0;
+    transition: background-color 0.3s;
 }
 
-.note .bi-file-earmark-plus {
-    top: 40px;
+.note button:hover {
+    background-color: #555;
 }
 
-.note .bi-x-lg:hover,
-.note .bi-file-earmark-plus:hover {
-    color: #fff;
+/* Botões de ação na nota */
+.note .delete-note {
+    background-color: #dc3545;
+}
+
+.note .delete-note:hover {
+    background-color: #c82333;
+}
+
+.note .fix-note {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.note .fix-note:hover {
+    background-color: #e0a800;
 }
 
 .note.fixed {
     background-color: #3c3c3f;
 }
 
+/* Ajustes adicionais */
 .export-container {
     margin-left: 1rem;
 }
