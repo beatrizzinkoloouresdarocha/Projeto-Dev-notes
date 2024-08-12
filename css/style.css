@@ -166,3 +166,7 @@ header {
 .note.fixed {
     background-color: #3c3c3f;
 }
+
+.export-container {
+    margin-left: 1rem;
+}
